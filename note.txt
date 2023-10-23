@@ -1,2 +1,0 @@
-- il fait quoi le loan ? Dans la limite des fonds de la banque ou du compte ?
-- comment modifier la somme d'account avec seulement des getters ?
