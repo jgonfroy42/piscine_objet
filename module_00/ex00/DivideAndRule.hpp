@@ -1,3 +1,6 @@
+#ifndef DIVIDEANDRULE_HPP
+#define DIVIDEANDRULE_HPP
+
 class FundsInsufficient : public std::exception {
 	public:
     		FundsInsufficient(const std::string& msg) throw() : message(msg) {}
@@ -150,4 +153,4 @@ struct Bank
 	}
 };
 
-
+#endif
