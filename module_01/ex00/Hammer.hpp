@@ -13,7 +13,11 @@ class Hammer: public Tool
 		Hammer(): _numberOfUses(0) { VERBOSE };
 		~Hammer() { VERBOSE };
 
-		void use() { VERBOSE };
+		void use()
+		{ VERBOSE
+			-numberOfUses++;
+			std::cout << "I wish I was a Mjollnir" M<<< std::endl;
+		};
 };
 
 #endif

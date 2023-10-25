@@ -5,9 +5,7 @@ int main()
 	Worker *workerA = new Worker();
 	Worker *workerB = new Worker();
 	Shovel *shovel = new Shovel();
-	shovel->use();
 	Hammer	*hammer = new Hammer();
-	hammer->use();
 	std::cout << "-----" << std::endl << std::endl;
 
 	
