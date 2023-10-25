@@ -10,6 +10,7 @@
 #include "Worker.hpp"
 #include "Tool.hpp"
 #include "Shovel.hpp"
+#include "Hammer.hpp"
 
 
 #endif

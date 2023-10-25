@@ -15,7 +15,13 @@ class Tool
 				this->_owner->removeTool(this);
 			this->_owner = owner;
 			this->_owner->addTool(this);
-		}
+		};
+
+		void returnTool()
+		{ VERBOSE
+			this->_owner->removeTool(this);
+			_owner = NULL;
+		};
 
 	protected:
 		Worker	*_owner;

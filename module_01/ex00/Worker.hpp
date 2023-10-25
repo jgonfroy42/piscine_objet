@@ -16,18 +16,16 @@ class Worker
 
 	
 		void addTool(Tool *tool) { VERBOSE this->_tools.insert(tool); };
-		void removeTool(Tool *tool) { VERBOSE this->_tools.erase(tool); };
+		void removeTool(Tool *tool)
+		{ VERBOSE
+			if (!this->_tools.erase(tool))
+				throw std::invalid_argument ("This tool doesn't exist");
+		};
+
 
 	public:	
 		Worker() { VERBOSE };
 		~Worker() { VERBOSE };
-
-		returnTool(Tool *tool)
-		{ VERBOSE
-			if (!this->_tools.erase(tool))
-				throw //texiste pas frere
-		}
-		
 };
 
 #endif

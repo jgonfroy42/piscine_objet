@@ -1,4 +1,4 @@
-NAME = ex01
+NAME = module
 
 SRCS =	main.cpp 
 
