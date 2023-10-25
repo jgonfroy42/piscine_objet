@@ -15,7 +15,7 @@ class Shovel: public Tool
 
 		void use()
 		{ VERBOSE
-			_numberofUses++;
+			_numberOfUses++;
 			std::cout << "I am a dwarf and I'm digging a hole" << std::endl;
 			std::cout << "Diggy diggy hole, diggy diggy hole" << std::endl;
 		};

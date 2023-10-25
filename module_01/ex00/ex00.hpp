@@ -7,10 +7,10 @@
 
 #include "Position.hpp"
 #include "Statistic.hpp"
+#include "Workshop.hpp"
 #include "Worker.hpp"
 #include "Tool.hpp"
 #include "Shovel.hpp"
 #include "Hammer.hpp"
-
 
 #endif
