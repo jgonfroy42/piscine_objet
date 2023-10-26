@@ -11,7 +11,11 @@ class Workshop
 
 	public:
 		Workshop() { VERBOSE };
-		~Workshop() { VERBOSE };
+		
+		~Workshop()
+		{  VERBOSE
+			//clean worker
+		};
 
 	private:
 		std::set<Worker *> _workers;

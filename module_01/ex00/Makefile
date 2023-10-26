@@ -1,6 +1,6 @@
 NAME = module
 
-SRCS =	main.cpp 
+SRCS =	main.cpp Worker.cpp 
 
 CXX = c++
 

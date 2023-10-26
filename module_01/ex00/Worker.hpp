@@ -27,7 +27,9 @@ class Worker
 
 	public:	
 		Worker() { VERBOSE };
-		~Worker() { VERBOSE };
+		~Worker();
+		
+		void work();
 
 		void registerToWorkshop(Workshop *workshop)
 		{ VERBOSE
@@ -38,19 +40,13 @@ class Worker
 			workshop->addWorker(this);
 		};
 		
-		void leaveWorshop(Workshop *workshop)
+		void leaveWorkshop(Workshop *workshop)
 		{
 			if (!this->_workshops.erase(workshop))
 				throw std::invalid_argument ("This workshop does not exist");
 			workshop->removeWorker(this);
 		};
 
-/*		void work()
-		{ VERBOSE
-			for (set<Tool*>::iterator it = this->_tools.begin(); it != this->_tools.end(); it++)
-				*it->use();
-		};
-*/
 };
 
 #endif

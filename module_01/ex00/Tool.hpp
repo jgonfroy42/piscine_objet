@@ -5,7 +5,12 @@ class Tool
 {
 	public:
 		Tool(): _owner(NULL) { VERBOSE };
-		~Tool() { VERBOSE };
+		
+		~Tool()
+		{ VERBOSE
+			if (this->_owner)
+				this->_owner->removeTool(this);
+		};
 	
 		virtual void use() = 0;
 
