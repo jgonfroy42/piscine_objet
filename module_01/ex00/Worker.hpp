@@ -41,7 +41,7 @@ class Worker
 		};
 		
 		void leaveWorkshop(Workshop *workshop)
-		{
+		{ VERBOSE
 			if (!this->_workshops.erase(workshop))
 				throw std::invalid_argument ("This workshop does not exist");
 			workshop->removeWorker(this);

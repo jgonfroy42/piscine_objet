@@ -6,7 +6,7 @@ class Tool
 	public:
 		Tool(): _owner(NULL) { VERBOSE };
 		
-		~Tool()
+		virtual ~Tool()
 		{ VERBOSE
 			if (this->_owner)
 				this->_owner->removeTool(this);

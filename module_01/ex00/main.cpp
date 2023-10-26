@@ -24,7 +24,7 @@ int main()
 	std::cout << "-----" << std::endl << std::endl;
 
 	std::cout << "Take back a hammer" << std::endl;
-	shovel->returnTool();
+	hammer->returnTool();
 	std::cout << "-----" << std::endl << std::endl;
 
 	std::cout << "Register to workershops" << std::endl;
@@ -33,12 +33,37 @@ int main()
 	workerB->registerToWorkshop(workshopA);
 	std::cout << "-----" << std::endl << std::endl;
 
+	std::cout << "Execute day work" << std::endl;
+	workshopA->executeWorkDay();
+	std::cout << "-----" << std::endl << std::endl;
+
 	std::cout << "Leave a workshop" << std::endl;
 	workerA->leaveWorkshop(workshopA);
 	workerA->leaveWorkshop(workshopB);
+	std::cout << "-----" << std::endl << std::endl;
 
 
-	std::cout << "Delete the owner of a shovel (the shovel will not be deleted)" << std::endl;
+	std::cout << "Delete the owner of a tool (the tool will not be deleted)" << std::endl;
 	delete workerB; 
 	std::cout << "-----" << std::endl << std::endl;
+
+	std::cout << "Delete a tool" << std::endl;
+	delete shovel;
+	std::cout << "-----" << std::endl << std::endl;
+
+	std::cout << "Give a tool and delete it" << std::endl;
+	hammer->giveTool(workerA);
+	delete hammer;
+	std::cout << "-----" << std::endl << std::endl;
+
+	std::cout << "Delete a workshop without worker" << std::endl;
+	delete workshopB;
+	std::cout << "-----" << std::endl << std::endl;
+
+	std::cout << "Join a workshop and delete it" << std::endl;
+	workerA->registerToWorkshop(workshopA);
+	delete workshopA;
+	std::cout << "-----" << std::endl << std::endl;
+
+
 }

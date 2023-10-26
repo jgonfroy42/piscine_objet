@@ -2,8 +2,10 @@
 
 	Worker::~Worker()
 { VERBOSE
+	(void)this->coordonnee;
+	(void)this->stat;
 
-/*segfault
+/*segfault car la suppression modifie les pointers
 	std::set<Tool*>::iterator it;
 	for (it = this->_tools.begin(); it !=  this->_tools.end(); it++)
 		(*it)->returnTool();
@@ -16,7 +18,7 @@
 	while (!this->_tools.empty())
 		(*this->_tools.begin())->returnTool();
 	while (!this->_workshops.empty())
-		this->leaveWorkshop(*this->_workshops.begin());
+		this->leaveWorkshop((*this->_workshops.begin()));
 }
 
 
