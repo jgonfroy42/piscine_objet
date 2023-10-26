@@ -16,6 +16,8 @@ class Tool
 
 		void giveTool(Worker *owner)
 		{ VERBOSE
+			if (!owner)
+				throw std::invalid_argument("This owner is not valid");
 			if (this->_owner != NULL)
 				this->_owner->removeTool(this);
 			this->_owner = owner;

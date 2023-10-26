@@ -42,6 +42,20 @@ int main()
 	workerA->leaveWorkshop(workshopB);
 	std::cout << "-----" << std::endl << std::endl;
 
+	std::cout << "User bad input" << std::endl;
+	try {
+		hammer->giveTool(NULL);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		workerA->leaveWorkshop(NULL);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "-----" << std::endl << std::endl;
 
 	std::cout << "Delete the owner of a tool (the tool will not be deleted)" << std::endl;
 	delete workerB; 
