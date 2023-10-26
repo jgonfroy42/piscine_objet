@@ -55,6 +55,13 @@ int main()
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+	try {
+		workerA->leaveWorkshop(workshopB);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+
 	std::cout << "-----" << std::endl << std::endl;
 
 	std::cout << "Delete the owner of a tool (the tool will not be deleted)" << std::endl;
