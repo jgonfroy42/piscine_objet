@@ -16,7 +16,7 @@ class Hammer: public Tool
 		void use()
 		{ VERBOSE
 			_numberOfUses++;
-			std::cout << "I wish I was a Mjollnir" << std::endl;
+			std::cout << "  ~Not the cannibal~" << std::endl;
 		};
 };
 
